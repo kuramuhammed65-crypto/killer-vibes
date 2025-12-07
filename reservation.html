@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation – Luxora Dining</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 class="form-title">Reservation Form</h2>
+  <form name="reservation" method="POST" data-netlify="true" class="form-card">
+  <input type="hidden" name="form-name" value="reservation">
+
+  <label>Name</label>
+  <input type="text" name="name" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <label>Phone</label>
+  <input type="text" name="phone" required>
+
+  <label>Date</label>
+  <input type="date" name="date" required>
+
+  <label>Time</label>
+  <input type="time" name="time" required>
+
+  <label>Number of Guests</label>
+  <input type="number" name="guests" min="1" required>
+
+  <button type="submit" class="btn">Submit Reservation</button>
+</form>
+
+</body>
+</html>

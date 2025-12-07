@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - label: "Hero Section"
+        name: "hero"
+        file: "index.html"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+      - label: "About Section"
+        name: "about"
+        file: "about.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "About Image", name: "about_image", widget: "image" }
+
+  - name: "menu"
+    label: "Menu"
+    files:
+      - label: "Menu Items"
+        name: "menu_items"
+        file: "menu.html"
+        fields:
+          - { label: "Section Name", name: "section_name", widget: "string" }
+          - { label: "Items", name: "items", widget: "list", fields: 
+              - { label: "Item Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+            }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - label: "Gallery Images"
+        name: "gallery"
+        file: "gallery.html"
+        fields:
+          - { label: "Images", name: "images", widget: "list", field: 
+              { label: "Image", name: "image", widget: "image" } }
+
+  - name: "contact"
+    label: "Contact & Reservation"
+    files:
+      - label: "Contact Info"
+        name: "contact_info"
+        file: "contact.html"
+        fields:
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+      - label: "Reservation Form"
+        name: "reservation"
+        file: "reservation.html"
+        fields:
+          - { label: "Form Heading", name: "form_heading", widget: "string" }
+          - { label: "Form Description", name: "form_description", widget: "text" }
+
